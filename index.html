@@ -37,12 +37,36 @@
         </div>
 
         <div class="projects-grid">
+            <div class="project-card project-featured reveal">
+                <div class="project-featured-info">
+                    <div class="project-number">01</div>
+                    <h3>Refinr</h3>
+                    <p>
+                        A Severance-themed web game disguised as a Lumon work terminal.
+                        Players sort AI-generated responses into quality bins — rating
+                        helpfulness, clarity, and honesty — unknowingly generating
+                        <strong>real RLHF preference data</strong>, the same signal AI labs
+                        use to train better language models. A gold standard system weights
+                        each player's labels based on their reliability as an annotator.
+                    </p>
+                    <div class="project-tags">
+                        <span>React</span>
+                        <span>TypeScript</span>
+                        <span>FastAPI</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="project-media">
+                    <video class="project-video" src="refinr/refst.mp4" autoplay muted loop playsinline></video>
+                </div>
+            </div>
+
             <div class="project-card reveal">
-                <div class="project-number">01</div>
+                <div class="project-number">02</div>
                 <h3>Coming soon...</h3>
                 <p>
                     A peer-to-peer social betting platform built with a 5-person team.
-                    Features OAuth auth, S3 media storage, a Python/FastAPI backend,
+                    Features OAuth auth, a Python/FastAPI backend, smart contract transactions,
                     and a cross-platform React Native frontend.
                 </p>
                 <div class="project-tags">
@@ -55,11 +79,11 @@
             </div>
 
             <div class="project-card reveal">
-                <div class="project-number">02</div>
-                <h3>TrendPoster</h3>
+                <div class="project-number">03</div>
+                <a href="https://www.github.com/arundelm/trendposter"><h3>TrendPoster</h3></a>
                 <p>
                     AI-powered tweet scheduler that analyzes trending topics
-                    and posts your queued tweets at the optimal moment.
+                    and posts your queued tweets at the optimal moment. Communicates through Discord/Telegram.
                     Supports Claude, GPT, Gemini, and local models.
                 </p>
                 <div class="project-tags">
@@ -224,6 +248,7 @@
 
         document.querySelectorAll('section[id]').forEach(s => sectionObserver.observe(s));
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
     </script>
 
 </body>
