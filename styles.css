@@ -192,6 +192,7 @@ section {
 
 .project-media {
     flex-shrink: 0;
+    width: 360px;
     border: 1px solid var(--border);
     border-radius: 4px;
     overflow: hidden;
@@ -200,9 +201,7 @@ section {
 
 .project-video {
     display: block;
-    max-width: 380px;
-    max-height: 220px;
-    width: auto;
+    width: 100%;
     height: auto;
 }
 
