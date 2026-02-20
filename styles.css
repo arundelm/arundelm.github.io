@@ -192,16 +192,17 @@ section {
 
 .project-media {
     flex-shrink: 0;
-    width: 45%;
-    max-width: 360px;
     border: 1px solid var(--border);
     border-radius: 4px;
     overflow: hidden;
+    line-height: 0;
 }
 
 .project-video {
     display: block;
-    width: 100%;
+    max-width: 380px;
+    max-height: 220px;
+    width: auto;
     height: auto;
 }
 
