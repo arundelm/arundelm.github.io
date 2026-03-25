@@ -40,7 +40,6 @@
             const themeToggle = document.getElementById('theme-toggle');
             const tabButtons = Array.from(document.querySelectorAll('.tab-button'));
             const promptPrefix = 'mick-arundel@portfolio %';
-            const xProfileUrl = 'https://x.com/mrundev';
             const headshotPath = 'media/headshot-w.png';
 
             const sections = {
@@ -123,7 +122,6 @@
                 'h/s - show hidden command list',
                 't - show tech stack',
                 'i - show headshot',
-                'x - open X profile',
                 'l - light mode',
                 'd - dark mode'
             ];
@@ -288,12 +286,6 @@
                         // Ignore storage failures.
                     }
                     appendLine(`Theme set to ${theme}.`, 'ok');
-                    return;
-                }
-
-                if (token === 'x') {
-                    const safeXUrl = escapeHtml(xProfileUrl);
-                    appendLine(`X: <a href="${safeXUrl}" target="_blank" rel="noopener noreferrer">${safeXUrl}</a>`, 'ok', true);
                     return;
                 }
 

@@ -48,9 +48,11 @@ body {
 }
 
 .app-frame {
-    width: min(1160px, 100%);
-    height: min(920px, calc(100vh - 1.2rem));
-    height: min(920px, calc(100dvh - 1.2rem));
+    width: 100%;
+    max-width: 1160px;
+    height: calc(100vh - 1.2rem);
+    height: calc(100dvh - 1.2rem);
+    max-height: 920px;
     display: grid;
     grid-template-rows: auto 1fr;
     gap: 0.5rem;
@@ -86,6 +88,8 @@ body {
 }
 
 .tab-button {
+    -webkit-appearance: none;
+    appearance: none;
     border: 1px solid transparent;
     border-radius: 999px;
     background: transparent;
@@ -125,6 +129,8 @@ body {
 }
 
 .theme-toggle {
+    -webkit-appearance: none;
+    appearance: none;
     border: 1px solid var(--line);
     border-radius: 999px;
     background: transparent;
