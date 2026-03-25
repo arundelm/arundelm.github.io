@@ -2,254 +2,380 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michael Arundel — Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Michael Arundel | Terminal Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <nav>
-        <div class="logo">MA</div>
-        <ul>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <section class="hero">
-        <h1>Michael Arundel</h1>
-        <p class="hero-label">Software Developer · Greater Chicago Area</p>
-        <div class="hero-links">
-            <a href="https://github.com/arundelm" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/michael-arundel" target="_blank">LinkedIn</a>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="reveal">
-            <div class="section-label">Selected Work</div>
-            <h2 class="section-title">Projects</h2>
-        </div>
-
-        <div class="projects-grid">
-            <div class="project-card project-featured reveal">
-                <div class="project-featured-info">
-                    <div class="project-number">01</div>
-                    <h3>Refinr</h3>
-                    <p>
-                        A Severance-themed web game disguised as a Lumon work terminal.
-                        Players sort AI-generated responses into quality bins — rating
-                        helpfulness, clarity, and honesty — unknowingly generating
-                        <strong>real RLHF preference data</strong>, the same signal AI labs
-                        use to train better language models. A gold standard system weights
-                        each player's labels based on their reliability as an annotator.
-                    </p>
-                    <div class="project-tags">
-                        <span>React</span>
-                        <span>TypeScript</span>
-                        <span>FastAPI</span>
-                        <span>PostgreSQL</span>
-                    </div>
-                </div>
-                <div class="project-media">
-                    <video class="project-video" src="refinr/refst.mp4" autoplay muted loop playsinline></video>
-                </div>
+    <div class="app-frame">
+        <nav class="top-nav" aria-label="Section navigation">
+            <div class="top-tabs">
+                <button type="button" class="tab-button is-active" data-command="a" data-section="about" aria-pressed="true">ABOUT</button>
+                <button type="button" class="tab-button" data-command="p" data-section="projects" aria-pressed="false">PROJECTS</button>
+                <button type="button" class="tab-button" data-command="e" data-section="experience" aria-pressed="false">EXPERIENCE</button>
             </div>
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">☀</button>
+        </nav>
 
-            <div class="project-card reveal">
-                <div class="project-number">02</div>
-                <h3>Coming soon...</h3>
-                <p>
-                    A peer-to-peer social betting platform built with a 5-person team.
-                    Features OAuth auth, a Python/FastAPI backend, smart contract transactions,
-                    and a cross-platform React Native frontend.
-                </p>
-                <div class="project-tags">
-                    <span>React Native</span>
-                    <span>FastAPI</span>
-                    <span>MongoDB</span>
-                    <span>S3</span>
-                    <span>OAuth</span>
-                </div>
-            </div>
+        <main class="terminal-shell" aria-label="Portfolio terminal">
+            <p class="terminal-commands">commands: a/about p/projects e/experience c/clear</p>
 
-            <div class="project-card reveal">
-                <div class="project-number">03</div>
-                <a href="https://www.github.com/arundelm/trendposter"><h3>TrendPoster</h3></a>
-                <p>
-                    AI-powered tweet scheduler that analyzes trending topics
-                    and posts your queued tweets at the optimal moment. Communicates through Discord/Telegram.
-                    Supports Claude, GPT, Gemini, and local models.
-                </p>
-                <div class="project-tags">
-                    <span>Python</span>
-                    <span>LLM</span>
-                    <span>X API</span>
-                    <span>Telegram</span>
-                </div>
-                
-            </div>
-        </div>
-    </section>
+            <section id="terminal-output" class="terminal-output" aria-live="polite"></section>
 
-    <section id="experience">
-        <div class="reveal">
-            <div class="section-label">Work History</div>
-            <h2 class="section-title">Experience</h2>
-        </div>
-        <div class="timeline reveal">
-            <div class="timeline-items">
-
-                <div class="timeline-item">
-                    <div class="timeline-dot timeline-dot--edu"></div>
-                    <div class="timeline-content">
-                        <div class="tl-date">Aug 2023</div>
-                        <div class="tl-title">University of Michigan</div>
-                        <div class="tl-role">B.S.E. Computer Science</div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="tl-date">Oct '23 – May '24</div>
-                        <div class="tl-title">UMich UMTRI</div>
-                        <div class="tl-role">Research Assistant</div>
-                        <div class="tl-tags">Python · pandas</div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="tl-date">May – Aug 2024</div>
-                        <div class="tl-title">Eggs Finance</div>
-                        <div class="tl-role">SWE Intern</div>
-                        <div class="tl-tags">React · Node.js · MongoDB</div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="tl-date">Jan – Mar 2025</div>
-                        <div class="tl-title">Astral</div>
-                        <div class="tl-role">SWE Intern</div>
-                        <div class="tl-tags">React · FastAPI · AWS</div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="tl-date">Jun – Nov 2025</div>
-                        <div class="tl-title">Federal Reserve</div>
-                        <div class="tl-role">Data Science Intern</div>
-                        <div class="tl-tags">Python · AWS · Terraform</div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot timeline-dot--edu"></div>
-                    <div class="timeline-content">
-                        <div class="tl-date">May 2026</div>
-                        <div class="tl-title">Graduate</div>
-                        <div class="tl-role">GPA: 4.0 / 4.0</div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="reveal">
-            <div class="section-label">About</div>
-            <h2 class="section-title">A bit about me</h2>
-        </div>
-
-        <div class="about-content reveal">
-            <div class="about-text">
-                <div class="about-photo">
-                    <img src="media/headshot.png" alt="Mick Arundel">
-                </div>
-                <p>
-                    I'm Mick — a software engineer who has been using em-dashes far before ChatGPT. Outside of coding, I've been playing basketball since I could walk, follow sports religiously, and am an extremely mediocre golfer.
-                </p>
-                <p>
-                    As I wrap up my CS degree at Michigan, I'm shifting focus toward building my own products. I'm focusing on building things that I want to use, and hopefully others will too.
-                </p>
-            </div>
-
-            <div class="about-details">
-                <div class="detail-group">
-                    <h4>Technologies</h4>
-                    <ul>
-                        <li>Python, C++</li>
-                        <li>React + TypeScript</li>
-                        <li>Docker, Linux, Cloud (AWS)</li>
-                        <li>PostgreSQL, MongoDB</li>
-                    </ul>
-                </div>
-
-                <div class="detail-group">
-                    <h4>Interests</h4>
-                    <ul>
-                        <li>AI agents &amp; automation</li>
-                    </ul>
-                </div>
-
-                <div class="detail-group">
-                    <h4>Currently</h4>
-                    <p>Building a peer-to-peer social wagering platform</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <div class="reveal">
-            <h2 class="section-title">Let's talk</h2>
-            <a href="mailto:marundel@umich.edu" class="contact-email">marundel@umich.edu</a>
-            <div class="contact-sub">
-                <a href="https://github.com/arundelm" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/michael-arundel" target="_blank">LinkedIn</a>
-            </div>
-        </div>
-        <div class="contact-copyright">&copy; 2026 Michael Arundel</div>
-    </section>
+            <form id="terminal-form" class="terminal-form" autocomplete="off">
+                <label class="prompt" for="terminal-input">mick-arundel@portfolio %</label>
+                <input id="terminal-input" class="terminal-input" name="command" type="text" placeholder="type a command and press enter" spellcheck="false" autocomplete="off" autofocus>
+            </form>
+        </main>
+    </div>
 
     <script>
-        // Scroll reveal
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+        (() => {
+            const outputEl = document.getElementById('terminal-output');
+            const formEl = document.getElementById('terminal-form');
+            const inputEl = document.getElementById('terminal-input');
+            const themeToggle = document.getElementById('theme-toggle');
+            const tabButtons = Array.from(document.querySelectorAll('.tab-button'));
+            const promptPrefix = 'mick-arundel@portfolio %';
+            const xProfileUrl = 'https://x.com/mrundev';
+            const headshotPath = 'media/headshot-w.png';
+
+            const sections = {
+                about: [
+                    'ABOUT',
+                    {
+                        name: 'Name',
+                        details: 'Michael Arundel, but I go by Mick'
+                    },
+                    {
+                        name: 'Education',
+                        details: 'UofM Computer Science in Engineering'
+                    },
+                    {
+                        name: 'Work',
+                        details: 'Software Engineer in the Greater Chicago Area'
+                    },
+                    {
+                        name: 'Personal',
+                        details: 'Mediocre Golfer, lifelong basketball player'
+                    },
+                    {
+                        name: 'Core Stack',
+                        details: 'C++, Python, AWS, Docker, Postgres'
+                    },
+                    {
+                        name: 'Email',
+                        detailsHtml: '<a href="mailto:marundel@umich.edu">marundel@umich.edu</a>'
+                    },
+                    {
+                        name: 'Profiles',
+                        detailsHtml: '<a href="https://github.com/arundelm" target="_blank" rel="noopener noreferrer">GitHub</a> | <a href="https://www.linkedin.com/in/michael-arundel" target="_blank" rel="noopener noreferrer">LinkedIn</a>'
+                    }
+                ],
+                projects: [
+                    'PROJECTS',
+                    {
+                        name: 'Social Wagering Platform',
+                        details: 'Peer-to-peer social betting experience in regulatory process',
+                        url: ''
+                    },
+                    {
+                        name: 'Refinr',
+                        details: 'Severance Macrodata Refinement style game that generates high-signal RLHF preference data',
+                        url: ''
+                    },
+                    {
+                        name: 'Trendposter',
+                        details: 'AI-powered tweet scheduler that watches trending topics and posts your queued tweets',
+                        url: 'https://github.com/arundelm/trendposter'
+                    }
+                ],
+                experience: [
+                    'EXPERIENCE',
+                    {
+                        name: 'Federal Reserve',
+                        details: 'Cloud/Data Engineering work + pitched AI adoption to C-Suite Executives as final project',
+                        url: ''
+                    },
+                    {
+                        name: 'Astral',
+                        details: 'Developed an AI trading assistant prototype that raised $2M in angel investment',
+                        url: 'https://heyastral.ai/'
+                    },
+                    {
+                        name: 'Eggs Finance',
+                        details: 'Designed a DeFi lending widget that resulted in $44M in borrowed funds and total value locked',
+                        url: 'https://eggs.finance/'
+                    },
+                    {
+                        name: 'UMich UMTRI',
+                        details: 'Analysis on wheelchair docking on autonomous vehicles adopted by an industry coalition',
+                        url: 'https://wc-transportation-safety.umtri.umich.edu/udig-universal-docking-interface-geometry/'
+                    }
+                ]
+            };
+
+            const hiddenCommands = [
+                'HIDDEN COMMANDS',
+                'h/s - show hidden command list',
+                't - show tech stack',
+                'i - show headshot',
+                'x - open X profile',
+                'l - light mode',
+                'd - dark mode'
+            ];
+
+            const techStack = [
+                'TECH STACK',
+                'Languages: C++, Python, TypeScript',
+                'Backend: FastAPI, REST APIs, Postgres',
+                'Infra: AWS, Docker',
+                'Focus: AI-enabled product development'
+            ];
+
+            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            const storedTheme = (() => {
+                try {
+                    return localStorage.getItem('theme');
+                } catch {
+                    return null;
+                }
+            })();
+            const initialTheme = storedTheme === 'light' || storedTheme === 'dark' ? storedTheme : systemTheme;
+
+            const commandHistory = [];
+            let commandHistoryIndex = -1;
+
+            const appendLine = (text, kind = 'info', allowHtml = false) => {
+                const line = document.createElement('p');
+                line.className = `term-line term-${kind}`;
+                if (allowHtml) {
+                    line.innerHTML = text;
+                } else {
+                    line.textContent = text;
+                }
+                outputEl.appendChild(line);
+                outputEl.scrollTop = outputEl.scrollHeight;
+            };
+
+            const appendImage = (src, alt) => {
+                const figure = document.createElement('figure');
+                figure.className = 'term-media';
+
+                const image = document.createElement('img');
+                image.className = 'term-image';
+                image.src = src;
+                image.alt = alt;
+                image.loading = 'lazy';
+
+                figure.appendChild(image);
+                outputEl.appendChild(figure);
+                outputEl.scrollTop = outputEl.scrollHeight;
+            };
+
+            const escapeHtml = (value) => String(value)
+                .replaceAll('&', '&amp;')
+                .replaceAll('<', '&lt;')
+                .replaceAll('>', '&gt;')
+                .replaceAll('"', '&quot;')
+                .replaceAll("'", '&#39;');
+
+            const formatEntryLine = (entry) => {
+                const name = escapeHtml(entry.name || '');
+                const details = entry.detailsHtml || escapeHtml(entry.details || '');
+                const hasUrl = Boolean(entry.url);
+                const safeUrl = hasUrl ? escapeHtml(entry.url) : '';
+                const title = hasUrl
+                    ? `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer">${name}</a>`
+                    : name;
+
+                return `<span class="term-entry-title">${title}</span><span class="term-entry-details"> - ${details}</span>`;
+            };
+
+            const appendBlock = (lines, kind = 'info') => {
+                lines.forEach((line, index) => {
+                    if (line && typeof line === 'object' && line.html) {
+                        appendLine(line.html, line.kind || kind, true);
+                        return;
+                    }
+
+                    if (line && typeof line === 'object' && line.name) {
+                        appendLine(formatEntryLine(line), line.kind || kind, true);
+                        return;
+                    }
+
+                    appendLine(line, index === 0 ? 'section' : kind);
+                });
+            };
+
+            const setActiveTab = (sectionKey) => {
+                tabButtons.forEach((button) => {
+                    const active = button.dataset.section === sectionKey;
+                    button.classList.toggle('is-active', active);
+                    button.setAttribute('aria-pressed', String(active));
+                });
+            };
+
+            const applyTheme = (theme) => {
+                document.documentElement.setAttribute('data-theme', theme);
+                const nextTheme = theme === 'dark' ? 'light' : 'dark';
+                themeToggle.textContent = theme === 'dark' ? '☾' : '☀';
+                themeToggle.setAttribute('aria-label', `Switch to ${nextTheme} mode`);
+                themeToggle.setAttribute('title', `${theme.charAt(0).toUpperCase()}${theme.slice(1)} mode`);
+                themeToggle.setAttribute('aria-pressed', String(theme === 'dark'));
+            };
+
+            const showSection = (sectionKey) => {
+                setActiveTab(sectionKey);
+                appendBlock(sections[sectionKey]);
+                window.history.replaceState(null, '', `#${sectionKey}`);
+            };
+
+            const runCommand = (rawInput, options = {}) => {
+                const { echo = true } = options;
+                const input = (rawInput || '').trim();
+
+                if (!input) {
+                    return;
+                }
+
+                const normalized = input.toLowerCase();
+                const token = normalized.split(/\s+/)[0];
+
+                if (echo) {
+                    appendLine(`${promptPrefix} ${input}`, 'command');
+                }
+
+                if (token === 'a' || token === 'about') {
+                    showSection('about');
+                    return;
+                }
+
+                if (token === 'p' || token === 'projects') {
+                    showSection('projects');
+                    return;
+                }
+
+                if (token === 'e' || token === 'experience') {
+                    showSection('experience');
+                    return;
+                }
+
+                if (token === 'c' || token === 'clear') {
+                    outputEl.textContent = '';
+                    return;
+                }
+
+                if (token === 'h' || token === 's') {
+                    appendBlock(hiddenCommands, 'ok');
+                    return;
+                }
+
+                if (token === 't') {
+                    appendBlock(techStack, 'info');
+                    return;
+                }
+
+                if (token === 'l' || token === 'd') {
+                    const theme = token === 'l' ? 'light' : 'dark';
+                    applyTheme(theme);
+                    try {
+                        localStorage.setItem('theme', theme);
+                    } catch {
+                        // Ignore storage failures.
+                    }
+                    appendLine(`Theme set to ${theme}.`, 'ok');
+                    return;
+                }
+
+                if (token === 'x') {
+                    const safeXUrl = escapeHtml(xProfileUrl);
+                    appendLine(`X: <a href="${safeXUrl}" target="_blank" rel="noopener noreferrer">${safeXUrl}</a>`, 'ok', true);
+                    return;
+                }
+
+                if (token === 'i') {
+                    appendImage(headshotPath, 'Headshot of Mick Arundel');
+                    appendLine('Headshot loaded.', 'ok');
+                    return;
+                }
+
+                appendLine(`msh: command not found: ${token}`, 'error');
+                appendLine('Hint: try h', 'ok');
+            };
+
+            formEl.addEventListener('submit', (event) => {
+                event.preventDefault();
+                const value = inputEl.value;
+
+                if (value.trim()) {
+                    commandHistory.push(value.trim());
+                    commandHistoryIndex = commandHistory.length;
+                }
+
+                runCommand(value);
+                inputEl.value = '';
+            });
+
+            tabButtons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    const sectionKey = button.dataset.section;
+                    outputEl.textContent = '';
+                    showSection(sectionKey);
+                    inputEl.focus();
+                });
+            });
+
+            inputEl.addEventListener('keydown', (event) => {
+                if (event.key === 'ArrowUp') {
+                    event.preventDefault();
+                    if (commandHistory.length === 0) {
+                        return;
+                    }
+
+                    commandHistoryIndex = Math.max(0, commandHistoryIndex - 1);
+                    inputEl.value = commandHistory[commandHistoryIndex] || '';
+                    return;
+                }
+
+                if (event.key === 'ArrowDown') {
+                    event.preventDefault();
+                    if (commandHistory.length === 0) {
+                        return;
+                    }
+
+                    commandHistoryIndex = Math.min(commandHistory.length, commandHistoryIndex + 1);
+                    inputEl.value = commandHistory[commandHistoryIndex] || '';
                 }
             });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-        // Active nav highlighting
-        const navLinks = document.querySelectorAll('nav ul a');
-        const sectionObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    const active = document.querySelector(`nav ul a[href="#${entry.target.id}"]`);
-                    if (active) active.classList.add('active');
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+                const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                applyTheme(nextTheme);
+                try {
+                    localStorage.setItem('theme', nextTheme);
+                } catch {
+                    // Ignore storage failures.
                 }
             });
-        }, { threshold: 0.5 });
 
-        document.querySelectorAll('section[id]').forEach(s => sectionObserver.observe(s));
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+            applyTheme(initialTheme);
+            appendLine('Portfolio terminal ready.', 'ok');
+            appendLine('Tip: not all commands are listed.', 'ok');
 
+            const initialHash = (window.location.hash || '').replace('#', '').toLowerCase();
+            if (initialHash && sections[initialHash]) {
+                showSection(initialHash);
+            } else {
+                showSection('about');
+            }
+
+            inputEl.focus();
+        })();
     </script>
-
 </body>
 </html>
